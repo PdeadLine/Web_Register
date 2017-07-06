@@ -15,19 +15,36 @@
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+	<script type="text/javascript">
+		function change(){
+		/*
+			1.获取image元素
+					
+		  */
+		  var ele =document.getElementById("vcode");
+		  ele.src ="<c:url value='/VerifyCodeServlet'/>?xx="+ new Date().getTime();
+		
+		}
+	</script>
 
   </head>
   
   <body>
-  	<div >
+  	
 	  	<h1>注册</h1>
+	  	<p style="color:red;font-width: 900">${msg }</p>
 	    <form action="<c:url value='/RegisterServlet'/>" method="post">
-	    	用户名:<input type="text" name="username"/><br/>
-	    	密码    :<input type="text" name="password"/><br/>
+	    <!--增加回显功能  -->
+	    	用    户:<input type="text" name="username" value="${user.username }"/>${errors.username }<br/>
+	    	密    码:<input type="text" name="password" value="${user.password }"/>${errors.password }<br/>
+	    	验证码:<input type="text" name="verifycode" value="${user.verifycode }" size="3"/>
+	    		<img alt="x" id="vcode" src="<c:url value='/VerifyCodeServlet'/>">
+	    		<a href="javascript:change();" >换一张</a>${errors.verifycode }
+	    	<br/>
 	    		<input type="submit" value="注册"/>
 	    	
 	    </form>
-  	</div>
+  	
     
   </body>
 </html>

@@ -19,6 +19,18 @@
   </head>
   
   <body>
-    This is my JSP page. <br>
+   
+	  	<h1>登陆</h1>
+	  	<p style="color:red;font-width: 900">${msg }</p>
+	    <form action="<c:url value='/LoginServlet'/>" method="post">
+	    <!--增加回显功能  -->
+	    	用    户:<input type="text" name="username" value="${user.username }"/>${errors.username }<br/>
+	    	密    码:<input type="text" name="password" value="${user.password }"/>${errors.password }<br/>
+	    	
+	    	<br/>
+	    		<input type="submit" value="登陆"/>
+	    	
+	    </form>
+  	
   </body>
 </html>

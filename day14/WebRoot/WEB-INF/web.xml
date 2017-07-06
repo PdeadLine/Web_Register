@@ -17,6 +17,20 @@
     <servlet-name>RegisterServlet</servlet-name>
     <servlet-class>com.github.user.web.servlet.RegisterServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>VerifyCode</servlet-name>
+    <servlet-class>com.github.user.web.servlet.VerifyCode</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>VerifyCodeServlet</servlet-name>
+    <servlet-class>com.github.user.web.servlet.VerifyCodeServlet</servlet-class>
+  </servlet>
+
+
 
 
   <servlet-mapping>
@@ -26,6 +40,14 @@
   <servlet-mapping>
     <servlet-name>RegisterServlet</servlet-name>
     <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VerifyCode</servlet-name>
+    <url-pattern>/VerifyCode</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VerifyCodeServlet</servlet-name>
+    <url-pattern>/VerifyCodeServlet</url-pattern>
   </servlet-mapping>	
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
